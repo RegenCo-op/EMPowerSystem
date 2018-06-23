@@ -261,7 +261,7 @@ __pycache__/
 *.pyc
 
 ## Visual Micro Stuff
-__vm/*
-!__vm/Configuration.*
+**/__vm/*
+!**/__vm/Configuration.*
 *CppProperties.json
 *.vcxproj*
