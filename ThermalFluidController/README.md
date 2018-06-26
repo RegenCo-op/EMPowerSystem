@@ -9,7 +9,7 @@ Precise regulation is achieved by pulsed width modulation or PWM of the power fo
 
 For the system to work many inputs are required.
 
-#### The controller must monitor sensors to generate the following variables:
+#### The controller must monitor sensors to generate the following variables
     
     tanklevelpumpoff  // the amount of fluid below full in the storage tank with the pump off in millimeters
     tanklevelpumpon  //  the amount of fluid below full in the storage tank with the pump on in millimeters
@@ -36,10 +36,10 @@ For the system to work many inputs are required.
     derivativegain  //  the gain for the derivative part of the PID 
 	overtempwarning  //  the temperature in degrees C of the storage tank over the maxtemp to activate warning 
 	belowfullwarning  // the level of the storage tank in millimeters below full to activate warning
-	pumpflowwarning  //  the measured flow in liters per minute below pumpflowcheck to activate warning  
+	pumpflowwarning  //  the measured flow in liters per minute below PumpFlowCheck() to activate warning  
     fill time  //  when the pump is turned on the time in milliseconds it takes for fluid level in tank  to change from fulllevelpumpoff to fulllevelpumpon
     drain time  //  when the pump is turned off the time in milliseconds it takes for fluid level in tank  to change from fulllevelpumpon to fulllevelpumpoff
-        //  for a non-drain back system these can be set at the minimum value to allow for pumpflowcheck to be performed
+        //  for a non-drain back system these can be set at the minimum value to allow for PumpFlowCheck() to be performed
 The basic on/off control of the pump is based upon the following:
 
     if collectortemp >= (onbuffertemp + hottertemp) turn pumpon
