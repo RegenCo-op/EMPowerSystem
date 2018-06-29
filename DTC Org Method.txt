@@ -1,0 +1,88 @@
+Diagnostic Trouble Code Organizational Methodology 
+
+Diagnostic Trouble Codes (DTC) are a ten digit alpha numeric code that is set and stored in memory when sensor readings are out of their normal range
+or are within range but not reading the value that is expected based upon actuator commands or readings from other sensors. 
+This is explained in detail in the Trouble Shooting section of this Wiki
+It is also in the Trouble Shooting section of this Wiki where it is explained how these codes are used to diagnose and fix problems with the EMPowerSystem.
+
+The ten digits are split into Identifier Blocks of two digits each: 01 23 45 67 89 
+
+Because each digit can be represented by 0-9 and A-Z  there are 10+26=36 possible combinations per digit.
+Each Identifier Block having two digits of 36 possible combinations has a total  of 36*36=1296 possible combinations per Identifier Block 
+This could be expanded further by including a-z and other ASCII symbols such as &,%,$,# etc.
+
+Each block represents the following:
+
+Identifier Block : Identifier Class
+
+01               : Network Identifier
+23               : Module Identifier
+45               : Sub-System, Sub-Module or Slave-Module Identifier
+67               : Component Identifier
+89               : Fault Identifier
+
+The Network Identifier identifies the network the DTC was set on. Not all DTCs are shared between all networks, only the networks associated with a DTC are shared the DTC.  
+The Network Identifier is an assignment value. The Local Network must generate a unique Internet IP address number to identify itself.
+This number is then assigned the value 00 as its Network Identifier. Each External Network the Local Network integrates with will be assigned a Network Identifier in order by first contact.
+So the first External Network integrated with would have its IP address assigned as 01, the second External Network integrated with would have its IP address assigned as 02 etc.
+
+As a table it looks like this:
+
+Network Identifier : Network IP address 
+00                 : 127.255.255.255 (Local Network)
+01                 : 489.001.569.421 (first External Network) 
+02				   : 300.005.021.601 (second External Network)
+Etc.               : Etc.
+
+The Module Identifier identifies the module on the network that set the DTC.
+Not all DTCs are shared between all Modules, only the Modules associated with the DTC and the User Interface Hub, Setup and Diagnostics Module are shared the DTC.
+
+Current Module Identifiers are as followed:
+
+Module Identifier : Module Name
+00                : User Interface Module
+01                : User Interface Hub, Setup and Diagnostics Module
+02                : Thermal Fluid Collector and Storage Module
+03                : Weather Monitoring Module
+04                : Photo-voltaic Charge Controller Module 
+05                : Wind Charge Controller Module
+06				  : Battery Charge Monitor Module
+05                : Bio-Digester Module
+06                : Bio-Reactor Module
+07                : Greenhouse Module
+08                : Garden Module
+09                : Pond Module
+10                : Aquaponics Module
+11                : HVAC Module
+As new Modules are created they will be added to this list
+
+The Sub-System or Sub-Module Identifier identifies the Sub-System or Sub-Module of the module that set the DTC
+
+There are two Sub-System Identifiers:
+
+Sub-System Identifier : Sub-System Name
+00                    : Input
+01                    : Output
+
+A Sub-Module is any device (other than a Slave-Module, explained below) connected to a Module that communicates via a Dedicated Communication Bus
+
+Current Sub-Module Identifiers are as followed:
+
+Sub-Module Identifier : Sub-Module Name
+02                    : Data Logger Sub-Module
+03                    : Ultrasonic Distance Sensor Sub-Module
+04                    : Digital Temperature and Humidity Sensor Sub-Module
+Etc.                  : Etc.
+
+A Slave-Module is identical (or performs the same main function) as the "Master" Module that over-arches it. 
+To allow the Sub-System and Sub-Module Identifiers of the Slave-Module the first Slave-Module Identifier digit is A and the second digit denotes the Sub-System or Sub-Module as follows:
+
+Slave-Module Identifier : Slave-Module Sub-System or Sub-Module Name
+A0                      : Slave-Module A Input
+A1                      : Slave-Module A Output
+A2	                    : Slave-Module A Data Logger Sub-Module
+Etc.                    : Etc.
+B0                      : Slave-Module B Input
+B1                      : Slave-Module B Output
+B2	                    : Slave-Module B Data Logger Sub-Module
+Etc.                    : Etc.
