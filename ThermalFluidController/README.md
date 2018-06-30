@@ -21,6 +21,8 @@ For the system to work many inputs are required.
 * pump_flow // the amount of fluid the pump is pumping in liters per minute
 
 #### The system must be set up initially and the following variables must be input:
+
+
 * `max_temp` // the desired maximum temperature in degrees C of the fluid in the storage tank
 * `on_buffer_temp`  // the temperature of the collector_temp above the hotter_temp temperature to turn the pump_on
 * `off_buffer_temp` // the temperature of the collector_temp above the hotter_temp temperature to turn the pump_off
