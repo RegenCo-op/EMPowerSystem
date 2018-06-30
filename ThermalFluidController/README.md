@@ -24,37 +24,37 @@ To achieve this precise regulation and provide operational safety of the system 
 
 #### Components that Monitor the Conditions:
 
-**Storage Tank Fluid Level (STFL):**  
+**Storage Tank Fluid Level:**  
 The Storage Tank Fluid Level is monitored by ultrasonic distance sensors measuring the distance from the sensor to the fluid.  
-STFL Sensors 1 and 2 are both located at the same hight in the storage tank.   
+Storage Tank Fluid Level Sensors 1 and 2 are both located at the same hight in the storage tank.   
 Two sensors are used because this condition is critical to safe and reliable operation.
 
-**Storage Tank Temperature (STT):**   
+**Storage Tank Temperature:**   
 The Storage Tank Temperature is monitored by three temperature sensors.  
-SST Sensor 1 and SST Sensor 2 monitor the Storage Tank Temperature at the top of the tank where if the tank is stratified it would be hottest.  
+Storage Tank Temperature Sensor 1 and 2 monitor the Storage Tank Temperature at the top of the tank where if the tank is stratified it would be hottest.  
 If using a multi-tank system they would be located in the tank directly receiving flow from the collector.   
 Two sensors are used because this condition is critical to safe and reliable operation.
 The third sensor is located in the bottom of the tank where if the tank is stratified it would be coldest.
 If using a multi-tank system it would be located in the tank directly feeding flow to the collector.
 This sensor isn't used in the control of the system but is necessary for analyzing the performance of the system.
 
-**Collector Temperature (CT):**  
+**Collector Temperature:**  
 The Collector Temperature is monitored by two temperature sensors embedded in the collector midway between fluid passages.  
-CT Sensor 1 is located in the middle of one halve of the collector.  
-CT sensor 2 is located in the middle of the other half of the collector.  
+Collector Temperature Sensor 1 is located in the middle of one halve of the collector.  
+Collector Temperature sensor 2 is located in the middle of the other half of the collector.  
 This is to get the best average temperature of the collector.  
 Two sensors are used  because this condition is critical to safe and reliable operation. 
 
-**Collector Output Temperature (COT):**   
+**Collector Output Temperature:**   
 The Collector Output Temperature is monitored by two temperature sensors embedded in the fluid flowing from the Collector.  
-Sensor One is located as close to the Collector outlet as possible but in the shade and not influenced by heat radiating from the outside.  
-The other is located as close to the Storage Tank inlet as possible but in the shade and not influenced by heat radiating from the outside.  
+Collector Output Temperature Sensor 1 is located as close to the Collector outlet as possible but in the shade and not influenced by heat radiating from the outside.  
+Collector Output Temperature Sensor 2 is located as close to the Storage Tank inlet as possible but in the shade and not influenced by heat radiating from the outside.  
 Two sensors are used because this condition is critical to safe and reliable operation.  
 
-**Pump Flow (PF)**
+**Pump Flow:**
 The Pump Flow is monitored by two fluid flow sensors in line with the fluid flow.  
-PF Sensor 1 is located at the outlet of the Storage Tank.  
-PF Sensor 2 is located at the inlet of the Storage Tank.
+Pump Flow Sensor 1 is located at the outlet of the Storage Tank.  
+Pump Flow Sensor 2 is located at the inlet of the Storage Tank.
 This arrangement can check for multiple system faults.  
 Two sensors are used because this condition is critical to safe and reliable operation.
 
