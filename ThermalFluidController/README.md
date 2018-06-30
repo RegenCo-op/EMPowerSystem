@@ -1,27 +1,62 @@
 ## Thermal Collector and  Storage Controller, Solar, Drainback
 
 ### System Discription:
-**Goal**: Achieve desired storage temperature while minimizing pump power usage.  
+#### **Goal**: Safely and reliably achieve desired storage temperature while minimizing pump power usage.  
 A solar thermal fluid system uses a fluid to collect and store thermal energy from sunlight.  
 
-**The main components consist of:** 
-* a collector to absorb the thermal energy 
-*  a storage tank to store the thermal energy  
-*  a pump to circulate the fluid from the collector and storage tank.
+**The main components consist of:**  
+* a fluid for absorbing, transporting and storing thermal energy. 
+* a collector to absorb the thermal energy and transfer it to the fluid. 
+*  a storage tank to store the fluid and thus the thermal energy.  
+*  a pump to circulate the fluid through the collector and storage tank.
   
-**Method:** Collector efficiency is maximized by maintaining the highest temperature differential between the collector and the fluid stream. 
+#### **Method:** Maximize the highest temperature differential between the collector and the fluid stream. 
 To maintain this temperature differential the pump speed must be precisely regulated. 
 Precise regulation is achieved by pulsed width modulation or PWM of the power for the pump.
 To achieve this precise regulation and provide operational safety of the system several conditions must be reliably monitored.
 
 **Conditions that need to be monitored:**  
-* storage tank fluid level
-* storage tank temperature
-* collector temperature
-* collector output temperature
-* pump flow  
+* Storage Tank Fluid Level
+* Storage Tank Temperature
+* Collector Temperature
+* Collector Output Temperature
+* Pump Flow  
 
-### Monitored Conditions Variables:
+#### Components that Monitor the Conditions:
+
+**Storage Tank Fluid Level (STFL):**  
+The Storage Tank Fluid Level is monitored by ultrasonic distance sensors measuring the distance from the sensor to the fluid.  
+STFL Sensors 1 and 2 are both located at the same hight in the storage tank.   
+Two sensors are used because this condition is critical to safe and reliable operation.
+
+**Storage Tank Temperature (STT):**   
+The Storage Tank Temperature is monitored by three temperature sensors.  
+SST Sensor 1 and SST Sensor 2 monitor the Storage Tank Temperature at the top of the tank where if the tank is stratified it would be hottest.  
+If using a multi-tank system they would be located in the tank directly receiving flow from the collector.   
+Two sensors are used because this condition is critical to safe and reliable operation.
+The third sensor is located in the bottom of the tank where if the tank is stratified it would be coldest.
+If using a multi-tank system it would be located in the tank directly feeding flow to the collector.
+This sensor isn't used in the control of the system but is necessary for analyzing the performance of the system.
+
+**Collector Temperature (CT):**  
+The Collector Temperature is monitored by two temperature sensors embedded in the collector midway between fluid passages.  
+CT Sensor 1 is located in the middle of one halve of the collector.  
+CT sensor 2 is located in the middle of the other half of the collector.  
+This is to get the best average temperature of the collector.  
+Two sensors are used  because this condition is critical to safe and reliable operation. 
+
+**Collector Output Temperature (COT):**   
+The Collector Output Temperature is monitored by two temperature sensors embedded in the fluid flowing from the Collector.  
+Sensor One is located as close to the Collector outlet as possible but in the shade and not influenced by heat radiating from the outside.  
+The other is located as close to the Storage Tank inlet as possible but in the shade and not influenced by heat radiating from the outside.  
+Two sensors are used because this condition is critical to safe and reliable operation.  
+
+**Pump Flow (PF)**
+The Pump Flow is monitored by two fluid flow sensors in line with the fluid flow.  
+PF Sensor 1 is located at the outlet of the Storage Tank.  
+PF Sensor 2 is located at the inlet of the Storage Tank.
+This arrangement can check for multiple system faults.  
+Two sensors are used because this condition is critical to safe and reliable operation.
 
 #### The controller must monitor sensors to generate the following variables  
 * tank_level_pump_off  // the amount of fluid below full in the storage tank with the pump off in millimeters
