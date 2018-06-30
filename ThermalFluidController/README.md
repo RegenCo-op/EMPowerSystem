@@ -43,28 +43,34 @@ For the system to work many inputs are required.
 *  `drain_time`  //  when the pump is turned off the time in milliseconds it takes for fluid level in tank  to change from full_level_pump_on to full_level_pump_off  
    **NOTE:**  for a non-drain back system these can be set at the minimum value to allow for pump_flowcheck to be performed
 #### The basic on/off control of the pump and initial diagnostic checks of the tank level and pump is based upon the following:
-* TankLevelCheck()
-  * start monitoring tank_level
-  * if tank_level <= full_level_pump_off - below_full_warning set Alarm, set DTC and do nothing else
-  * if tank_level >= full_level_pump_off + above_full_warning set Alarm, set DTC and do nothing else
-  * if tank_level >= full_level_pump_off - below_full_warning continue
+```
+TankLevelCheck()
+    start monitoring tank_level
+    if (tank_level <= full_level_pump_off - below_full_warning):  
+        set Alarm, set DTC and do nothing else
+    if (tank_level >= full_level_pump_off + above_full_warning):  
+        set Alarm, set DTC and do nothing else
+    if (tank_level >= full_level_pump_off - below_full_warning):  
+        continue
 
-* start monitoring collector_temp
-* start monitoring hotter_temp_
-  * `if (collector_temp >= (on_buffer_temp + hotter_temp));`  
- 	`turn pump_on;`  
-    set pump_PWM to 100%;`   
+start monitoring collector_temp
+start monitoring hotter_temp_
+
+if (collector_temp >= (on_buffer_temp + hotter_temp)):  
+    turn pump_on
+    set pump_PWM to 100%
     start counter for fill_time_check  
     start monitoring current_pump_flow  
     wait a short bit for pump flow to stabilize
-    is current_pump_flow <= max_pump_flow - pump_flow_warning 
-    
-   
+    is current_pump_flow <= max_pump_flow - pump_flow_warning
+
     when fill time reached is current_tank_level <= full_level_pump_on + below
 
-* `if (collector_temp <= (off_buffer_temp + hotter_temp)): 
-		turn pump_off;  
-		set pump_PWM to 0%;`
+
+if (collector_temp <= (off_buffer_temp + hotter_temp)):
+    turn pump_off;  
+    set pump_PWM to 0%;
+```
 
 
 ### The control of the pump is done with a PID controller or Proportional, Integral, Derivative controller
@@ -108,11 +114,3 @@ The pump_PWM is limited by:
 		pump_PWM = min_pump_PWM
 	else if (pump_PWM > max_pump_PWM):
 		pump_PWM = max_pump_PWM
-
-
-    
-        
-        
-    
-        
-	    
