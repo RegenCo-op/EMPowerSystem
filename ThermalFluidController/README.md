@@ -1,15 +1,29 @@
-## Solar Thermal Fluid Controller and Performance Analyzer
+## Thermal Collector and  Storage Controller, Solar, Drainback
 
-Goal: Achieve desired temperature while minimizing pump power usage.
-A thermal fluid system uses a fluid to collect and store thermal energy.
-The components consist of a collector to absorb the thermal energy, a storage tank to store the thermal energy and a pump to circulate the fluid from the collector and storage tank
-Collector efficiency is maximized by maintaining the highest temperature differential between the collector and the fluid stream. 
+### System Discription:
+**Goal**: Achieve desired storage temperature while minimizing pump power usage.  
+A solar thermal fluid system uses a fluid to collect and store thermal energy from sunlight.  
+
+**The main components consist of:** 
+* a collector to absorb the thermal energy 
+*  a storage tank to store the thermal energy  
+*  a pump to circulate the fluid from the collector and storage tank.
+  
+**Method:** Collector efficiency is maximized by maintaining the highest temperature differential between the collector and the fluid stream. 
 To maintain this temperature differential the pump speed must be precisely regulated. 
 Precise regulation is achieved by pulsed width modulation or PWM of the power for the pump.
+To achieve this precise regulation and provide operational safety of the system several conditions must be reliably monitored.
 
-For the system to work many inputs are required.
+**Conditions that need to be monitored:**  
+* storage tank fluid level
+* storage tank temperature
+* collector temperature
+* collector output temperature
+* pump flow  
 
-#### The controller must monitor sensors to generate the following variables
+### Monitored Conditions Variables:
+
+#### The controller must monitor sensors to generate the following variables  
 * tank_level_pump_off  // the amount of fluid below full in the storage tank with the pump off in millimeters
 * tank_level_pump_on  //  the amount of fluid below full in the storage tank with the pump on in millimeters  
   // with a drain back system these would be set different, non drain back they would be set the same
