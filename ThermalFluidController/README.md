@@ -1,6 +1,7 @@
-## Thermal Collector and  Storage Controller, Solar, Drainback
+## Thermal Energy Collection and Storage Controller for a Solar Drainback System
 
-### System Discription:
+### **System Discription:**
+
 #### **Goal**: Safely and reliably achieve desired storage temperature while minimizing pump power usage.  
 A solar thermal fluid system uses a fluid to collect and store thermal energy from sunlight.  
 
@@ -58,7 +59,13 @@ Pump Flow Sensor 2 is located at the inlet of the Storage Tank.
 This arrangement can check for multiple system faults.  
 Two sensors are used because this condition is critical to safe and reliable operation.
 
-### Operation of System:
+### **Operation of System:**
+
+#### Continuously Monitored Conditions:  
+  * Storage Tank Fluid Level  
+  * Storage Tank Temperature 
+  * Collector Temperature
+
 
 Step 1. Check the Storage Tank Fluid Level.  
    i. Check to make sure Storage Tank Fluid Level Sensors 1 and 2 are in agreement.  
