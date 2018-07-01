@@ -58,6 +58,23 @@ Pump Flow Sensor 2 is located at the inlet of the Storage Tank.
 This arrangement can check for multiple system faults.  
 Two sensors are used because this condition is critical to safe and reliable operation.
 
+### Operation of System:
+
+Step 1. Check the Storage Tank Fluid Level.  
+   i. Check to make sure Storage Tank Fluid Level Sensors 1 and 2 are in agreement.  
+      * If not set alarm and fault code and continue to ii.
+      * If in agreement continue to iii. 
+        
+   ii. Check to see if at least one of them is in normal range,  
+       * If both out of normal range set alarm and fault code and DO NOT continue, conditions do not support safe and reliable operation.  
+       * If at least one is in normal range continue to iv.  
+
+   iii. Average Storage Tank Fluid Level Sensors 1 and 2 readings to define the Storage Tank Fluid Level and continue to Step 2.  
+   iv. Use the reading of the of the sensor within normal range to define the Storage Tank Fluid Level and continue to Step 2.              
+  
+
+
+
 
 TankLevelCheck()
     start monitoring tank_level
