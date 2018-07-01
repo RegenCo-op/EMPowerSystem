@@ -58,7 +58,7 @@ Pump Flow Sensor 2 is located at the inlet of the Storage Tank.
 This arrangement can check for multiple system faults.  
 Two sensors are used because this condition is critical to safe and reliable operation.
 
-#### The controller must monitor sensors to generate the following variables  
+// The controller must monitor sensors to generate the following variables  
 * tank_level_pump_off  // the amount of fluid below full in the storage tank with the pump off in millimeters
 * tank_level_pump_on  //  the amount of fluid below full in the storage tank with the pump on in millimeters  
   // with a drain back system these would be set different, non drain back they would be set the same
@@ -69,9 +69,7 @@ Two sensors are used because this condition is critical to safe and reliable ope
 * output_temp // the temperature in degrees C of the fluid exiting the collector
 * pump_flow // the amount of fluid the pump is pumping in liters per minute
 
-#### The system must be set up initially and the following variables must be input:
-
-
+// The system must be set up initially and the following variables must be input:
 * `max_temp` // the desired maximum temperature in degrees C of the fluid in the storage tank
 * `on_buffer_temp`  // the temperature of the collector_temp above the hotter_temp temperature to turn the pump_on
 * `off_buffer_temp` // the temperature of the collector_temp above the hotter_temp temperature to turn the pump_off
