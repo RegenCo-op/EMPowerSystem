@@ -618,9 +618,9 @@ No</panel_attributes>
   <element>
     <id>UMLSyncBarHorizontal</id>
     <coordinates>
-      <x>396</x>
+      <x>495</x>
       <y>513</y>
-      <w>288</w>
+      <w>189</w>
       <h>18</h>
     </coordinates>
     <panel_attributes>lw=5
@@ -957,5 +957,19 @@ Level</panel_attributes>
     <panel_attributes>lt=&lt;-
 </panel_attributes>
     <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>630</x>
+      <y>18</y>
+      <w>99</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>From:
+Pump OFF
+Sensor Checks
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
