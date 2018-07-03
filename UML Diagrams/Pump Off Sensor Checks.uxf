@@ -474,17 +474,6 @@ Fail Counter</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>396</x>
-      <y>729</y>
-      <w>90</w>
-      <h>36</h>
-    </coordinates>
-    <panel_attributes>Fail Counter</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLObject</id>
-    <coordinates>
       <x>504</x>
       <y>729</y>
       <w>90</w>
@@ -560,5 +549,17 @@ Threshold</panel_attributes>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>396</x>
+      <y>729</y>
+      <w>90</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Fail Counter
+type=receiver</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
