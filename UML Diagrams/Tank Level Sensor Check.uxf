@@ -189,7 +189,7 @@ No</panel_attributes>
       <w>72</w>
       <h>36</h>
     </coordinates>
-    <panel_attributes>Set Code</panel_attributes>
+    <panel_attributes>Set DTC</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -200,7 +200,7 @@ No</panel_attributes>
       <w>72</w>
       <h>36</h>
     </coordinates>
-    <panel_attributes>Set Code</panel_attributes>
+    <panel_attributes>Set DTC</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -234,7 +234,7 @@ No</panel_attributes>
       <w>72</w>
       <h>36</h>
     </coordinates>
-    <panel_attributes>Set Code</panel_attributes>
+    <panel_attributes>Set DTC</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -398,7 +398,7 @@ No</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>531</x>
+      <x>648</x>
       <y>900</y>
       <w>27</w>
       <h>45</h>
@@ -409,7 +409,7 @@ No</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>531</x>
+      <x>648</x>
       <y>927</y>
       <w>18</w>
       <h>18</h>
@@ -635,7 +635,7 @@ No</panel_attributes>
       <w>72</w>
       <h>36</h>
     </coordinates>
-    <panel_attributes>Set Code</panel_attributes>
+    <panel_attributes>Set DTC</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -759,17 +759,6 @@ Alarm</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>657</x>
-      <y>396</y>
-      <w>45</w>
-      <h>27</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>30.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLObject</id>
     <coordinates>
       <x>693</x>
@@ -803,7 +792,7 @@ Fail Counter
       <w>72</w>
       <h>36</h>
     </coordinates>
-    <panel_attributes>Set Code</panel_attributes>
+    <panel_attributes>Set DTC</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -931,7 +920,7 @@ Level</panel_attributes>
       <w>72</w>
       <h>36</h>
     </coordinates>
-    <panel_attributes>Set Code</panel_attributes>
+    <panel_attributes>Set DTC</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -971,5 +960,28 @@ Pump OFF
 Sensor Checks
 style=wordwrap</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>612</x>
+      <y>873</y>
+      <w>90</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Activate
+Alarm</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>567</x>
+      <y>882</y>
+      <w>63</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
