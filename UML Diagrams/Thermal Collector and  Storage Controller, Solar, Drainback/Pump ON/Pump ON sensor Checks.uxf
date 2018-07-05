@@ -4,7 +4,7 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>300</x>
+      <x>290</x>
       <y>80</y>
       <w>30</w>
       <h>50</h>
@@ -15,7 +15,7 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>260</x>
+      <x>250</x>
       <y>370</y>
       <w>110</w>
       <h>40</h>
@@ -27,7 +27,7 @@ Sensor Check</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>300</x>
+      <x>290</x>
       <y>400</y>
       <w>30</w>
       <h>50</h>
@@ -38,7 +38,7 @@ Sensor Check</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>290</x>
+      <x>280</x>
       <y>430</y>
       <w>40</w>
       <h>40</h>
@@ -49,7 +49,7 @@ Sensor Check</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>300</x>
+      <x>290</x>
       <y>460</y>
       <w>60</w>
       <h>60</h>
@@ -62,7 +62,7 @@ Pass
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>320</x>
+      <x>310</x>
       <y>430</y>
       <w>130</w>
       <h>40</h>
@@ -74,7 +74,7 @@ Full Fail</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>260</x>
+      <x>250</x>
       <y>110</y>
       <w>100</w>
       <h>40</h>
@@ -86,7 +86,7 @@ Sensor Check</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>290</x>
+      <x>280</x>
       <y>170</y>
       <w>40</w>
       <h>40</h>
@@ -97,7 +97,7 @@ Sensor Check</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>320</x>
+      <x>310</x>
       <y>170</y>
       <w>130</w>
       <h>170</h>
@@ -109,7 +109,7 @@ Full Fail</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>300</x>
+      <x>290</x>
       <y>200</y>
       <w>60</w>
       <h>60</h>
@@ -122,7 +122,7 @@ Pass
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>300</x>
+      <x>290</x>
       <y>140</y>
       <w>30</w>
       <h>50</h>
@@ -133,7 +133,7 @@ Pass
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>260</x>
+      <x>250</x>
       <y>240</y>
       <w>100</w>
       <h>40</h>
@@ -145,7 +145,7 @@ Sensor Check</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>290</x>
+      <x>280</x>
       <y>300</y>
       <w>40</w>
       <h>40</h>
@@ -156,7 +156,7 @@ Sensor Check</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>320</x>
+      <x>310</x>
       <y>300</y>
       <w>130</w>
       <h>40</h>
@@ -168,7 +168,7 @@ Full Fail</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>300</x>
+      <x>290</x>
       <y>330</y>
       <w>60</w>
       <h>60</h>
@@ -181,7 +181,7 @@ Pass
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>300</x>
+      <x>290</x>
       <y>270</y>
       <w>30</w>
       <h>50</h>
@@ -192,7 +192,7 @@ Pass
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>260</x>
+      <x>250</x>
       <y>500</y>
       <w>100</w>
       <h>40</h>
@@ -204,7 +204,7 @@ Sensor Check</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>290</x>
+      <x>280</x>
       <y>560</y>
       <w>40</w>
       <h>40</h>
@@ -215,7 +215,7 @@ Sensor Check</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>320</x>
+      <x>310</x>
       <y>560</y>
       <w>130</w>
       <h>40</h>
@@ -227,7 +227,7 @@ Full Fail</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>300</x>
+      <x>290</x>
       <y>530</y>
       <w>30</w>
       <h>50</h>
@@ -238,7 +238,7 @@ Full Fail</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>260</x>
+      <x>250</x>
       <y>630</y>
       <w>100</w>
       <h>40</h>
@@ -250,7 +250,7 @@ Sensor Check</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>290</x>
+      <x>280</x>
       <y>690</y>
       <w>40</w>
       <h>40</h>
@@ -261,7 +261,7 @@ Sensor Check</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>320</x>
+      <x>310</x>
       <y>690</y>
       <w>130</w>
       <h>40</h>
@@ -273,7 +273,7 @@ Full Fail</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>300</x>
+      <x>290</x>
       <y>720</y>
       <w>60</w>
       <h>70</h>
@@ -286,7 +286,7 @@ Pass
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>300</x>
+      <x>290</x>
       <y>660</y>
       <w>30</w>
       <h>50</h>
@@ -299,7 +299,7 @@ Pass
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>280</x>
+      <x>270</x>
       <y>910</y>
       <w>90</w>
       <h>40</h>
@@ -312,7 +312,7 @@ Set DTC
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>300</x>
+      <x>290</x>
       <y>590</y>
       <w>60</w>
       <h>60</h>
@@ -325,7 +325,7 @@ Pass
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>20</x>
+      <x>10</x>
       <y>20</y>
       <w>680</w>
       <h>1010</h>
@@ -340,7 +340,7 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>350</x>
+      <x>340</x>
       <y>120</y>
       <w>350</w>
       <h>540</h>
@@ -355,7 +355,7 @@ Time
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>490</x>
+      <x>480</x>
       <y>670</y>
       <w>160</w>
       <h>280</h>
@@ -367,7 +367,7 @@ No</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>460</x>
+      <x>450</x>
       <y>910</y>
       <w>40</w>
       <h>40</h>
@@ -378,7 +378,7 @@ No</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>470</x>
+      <x>460</x>
       <y>850</y>
       <w>110</w>
       <h>80</h>
@@ -392,7 +392,7 @@ Fail Counter
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
+      <x>350</x>
       <y>910</y>
       <w>120</w>
       <h>50</h>
@@ -405,7 +405,7 @@ Yes
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>270</x>
+      <x>260</x>
       <y>970</y>
       <w>110</w>
       <h>40</h>
@@ -416,7 +416,7 @@ Yes
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
+      <x>410</x>
       <y>700</y>
       <w>100</w>
       <h>120</h>
@@ -431,7 +431,7 @@ Fail Counter
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>40</x>
+      <x>30</x>
       <y>700</y>
       <w>100</w>
       <h>50</h>
@@ -444,7 +444,7 @@ Threshold</panel_attributes>
   <element>
     <id>UMLSyncBarHorizontal</id>
     <coordinates>
-      <x>380</x>
+      <x>370</x>
       <y>850</y>
       <w>220</w>
       <h>20</h>
@@ -456,7 +456,7 @@ Threshold</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
+      <x>410</x>
       <y>830</y>
       <w>30</w>
       <h>50</h>
@@ -467,7 +467,7 @@ Threshold</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
+      <x>60</x>
       <y>740</y>
       <w>30</w>
       <h>50</h>
@@ -478,7 +478,7 @@ Threshold</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
+      <x>410</x>
       <y>310</y>
       <w>30</w>
       <h>160</h>
@@ -489,7 +489,7 @@ Threshold</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
+      <x>410</x>
       <y>440</y>
       <w>30</w>
       <h>160</h>
@@ -500,7 +500,7 @@ Threshold</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
+      <x>410</x>
       <y>570</y>
       <w>30</w>
       <h>160</h>
@@ -511,7 +511,7 @@ Threshold</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>380</x>
+      <x>370</x>
       <y>800</y>
       <w>100</w>
       <h>40</h>
@@ -523,7 +523,7 @@ Counter</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>580</x>
+      <x>570</x>
       <y>640</y>
       <w>100</w>
       <h>40</h>
@@ -535,18 +535,18 @@ Time</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>260</x>
+      <x>250</x>
       <y>50</y>
       <w>100</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Pump OFF</panel_attributes>
+    <panel_attributes>Pump ON</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>30</x>
+      <x>20</x>
       <y>970</y>
       <w>100</w>
       <h>40</h>
@@ -558,7 +558,7 @@ On or OFF</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>150</x>
+      <x>140</x>
       <y>710</y>
       <w>100</w>
       <h>40</h>
@@ -570,7 +570,7 @@ Counter</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>500</x>
+      <x>490</x>
       <y>790</y>
       <w>100</w>
       <h>50</h>
@@ -583,7 +583,7 @@ Threshold</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>540</x>
+      <x>530</x>
       <y>830</y>
       <w>30</w>
       <h>50</h>
@@ -594,7 +594,7 @@ Threshold</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>190</x>
+      <x>180</x>
       <y>170</y>
       <w>120</w>
       <h>40</h>
@@ -606,7 +606,7 @@ Half Fail</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>190</x>
+      <x>180</x>
       <y>740</y>
       <w>30</w>
       <h>50</h>
@@ -617,7 +617,7 @@ Half Fail</panel_attributes>
   <element>
     <id>UMLSyncBarHorizontal</id>
     <coordinates>
-      <x>40</x>
+      <x>30</x>
       <y>760</y>
       <w>290</w>
       <h>20</h>
@@ -629,7 +629,7 @@ Half Fail</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>190</x>
+      <x>180</x>
       <y>300</y>
       <w>120</w>
       <h>40</h>
@@ -641,7 +641,7 @@ Half Fail</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>190</x>
+      <x>180</x>
       <y>430</y>
       <w>120</w>
       <h>40</h>
@@ -653,7 +653,7 @@ Half Fail</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>190</x>
+      <x>180</x>
       <y>560</y>
       <w>120</w>
       <h>40</h>
@@ -665,7 +665,7 @@ Half Fail</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>190</x>
+      <x>180</x>
       <y>180</y>
       <w>30</w>
       <h>160</h>
@@ -676,7 +676,7 @@ Half Fail</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>190</x>
+      <x>180</x>
       <y>310</y>
       <w>30</w>
       <h>160</h>
@@ -687,7 +687,7 @@ Half Fail</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>190</x>
+      <x>180</x>
       <y>440</y>
       <w>30</w>
       <h>160</h>
@@ -698,7 +698,7 @@ Half Fail</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>190</x>
+      <x>180</x>
       <y>570</y>
       <w>30</w>
       <h>160</h>
@@ -709,7 +709,7 @@ Half Fail</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>120</x>
+      <x>110</x>
       <y>760</y>
       <w>110</w>
       <h>80</h>
@@ -723,7 +723,7 @@ Fail Counter
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>110</x>
+      <x>100</x>
       <y>820</y>
       <w>40</w>
       <h>40</h>
@@ -734,7 +734,7 @@ Fail Counter
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>60</x>
+      <x>50</x>
       <y>820</y>
       <w>70</w>
       <h>170</h>
@@ -746,7 +746,7 @@ No</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>120</x>
+      <x>110</x>
       <y>850</y>
       <w>50</w>
       <h>100</h>
@@ -759,7 +759,7 @@ Yes
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>120</x>
+      <x>110</x>
       <y>920</y>
       <w>180</w>
       <h>30</h>
@@ -770,7 +770,7 @@ Yes
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>310</x>
+      <x>300</x>
       <y>940</y>
       <w>30</w>
       <h>50</h>
