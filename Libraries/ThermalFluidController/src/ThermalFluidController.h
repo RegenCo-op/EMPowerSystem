@@ -15,10 +15,9 @@ class ThermalFluidController
 private:
 	PumpStates pump_state;
 	TankLevelSensors tank_level_sensors;
-	void TankLevelSensorCheck();
 public:
 	ThermalFluidController();
-	Run();
+	void Run();
 };
 
 

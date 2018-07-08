@@ -2,10 +2,10 @@
 
 ThermalFluidController::ThermalFluidController()
 {
-	//Initialize pins
+
 }
 
-ThermalFluidController::Run()
+void ThermalFluidController::Run()
 {
 
 }
