@@ -4,7 +4,7 @@
 
 void setup()
 {
-
+	ThermalFluidController test(0,0,0,0);
 
 }
 

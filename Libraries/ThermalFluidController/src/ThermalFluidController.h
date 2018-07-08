@@ -16,7 +16,7 @@ private:
 	PumpStates pump_state;
 	TankLevelSensors tank_level_sensors;
 public:
-	ThermalFluidController();
+	ThermalFluidController(int plausible_tank_level, int level_diff_spec_range, int full_level_pump_off, int tank_level_max_error);
 	void Run();
 };
 
