@@ -1,8 +1,17 @@
-#ifndef THERMALFLUIDCONTROLLER_TANKLEVELSENSORS_h
-#define THERMALFLUIDCONTROLLER_TANKLEVELSENSORS_h
+#ifndef THERMALFLUIDCONTROLLER_TANKLEVELSENSORS_H
+#define THERMALFLUIDCONTROLLER_TANKLEVELSENSORS_H
 
 #include "NewPing.h"
 #include "PinDefinitions.h"
+
+struct TankLevelSensorsConfig
+{
+	int plausible_tank_level_min;
+	int plausible_tank_level_max;
+	int level_diff_spec_range;
+	int full_level_pump_off;
+	int tank_level_max_error;
+};
 
 class TankLevelSensors
 {
@@ -20,8 +29,12 @@ private:
 	int full_level_pump_off_;
 	int tank_level_max_error_;
 
+	int ReadSensor1Level_();
+	int ReadSensor2Level_();
+
 public:
-	TankLevelSensors(int plausible_tank_level, int level_diff_spec_range, int full_level_pump_off, int tank_level_max_error);
+	TankLevelSensors(TankLevelSensorsConfig tank_level_sensors_config);
+
 };
 
 #endif

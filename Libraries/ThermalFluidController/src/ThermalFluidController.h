@@ -1,5 +1,5 @@
-#ifndef THERMALFLUIDCONTROLLER_THERMALFLUIDCONTROLLER_h
-#define THERMALFLUIDCONTROLLER_THERMALFLUIDCONTROLLER_h
+#ifndef THERMALFLUIDCONTROLLER_THERMALFLUIDCONTROLLER_H
+#define THERMALFLUIDCONTROLLER_THERMALFLUIDCONTROLLER_H
 
 #include "TankLevelSensors/TankLevelSensors.h"
 #include "PinDefinitions.h"
@@ -16,7 +16,7 @@ private:
 	PumpStates pump_state;
 	TankLevelSensors tank_level_sensors;
 public:
-	ThermalFluidController(int plausible_tank_level, int level_diff_spec_range, int full_level_pump_off, int tank_level_max_error);
+	ThermalFluidController(TankLevelSensorsConfig tank_level_sensors_config);
 	void Run();
 };
 
