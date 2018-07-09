@@ -2,7 +2,7 @@
 #include "ThermalFluidController.h"
 
 
-TankLevelSensorsConfig tank_level_sensors_config = { 0,0,0,0,0,0 };
+TankLevelSensorsConfig tank_level_sensors_config = { 0,0,0,0,0 };
 
 void setup()
 {
