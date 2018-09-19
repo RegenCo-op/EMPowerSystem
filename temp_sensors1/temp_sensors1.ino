@@ -144,7 +144,7 @@ void loop()
 	//Serial.println(" c ");
 }
 // This function will read the provided sensor pin num_samples of times and take an average.
-// Each sample will have an interval of sample_interval between samples
+// Each sample will have an interval of sample_interval milliseconds between samples
 //Blocks execution of rest of program until we have all samples, could be improved
 float sample(byte pin, unsigned int num_samples, unsigned int sample_interval)
 {	
