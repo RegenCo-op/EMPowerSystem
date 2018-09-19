@@ -1,7 +1,7 @@
 //Measure NTC value
-byte tank_temp = A1; //signal from temp sensor in bucket
-byte collector_temp = A2; //signal from temp sensor iin heated pot
-byte output_temp = A3; //signal from temp sensor in outlet pipe from heated pot
+byte tank_temp_pin = A1; //signal from temp sensor in bucket
+byte collector_temp_pin = A2; //signal from temp sensor iin heated pot
+byte output_temp_pin = A3; //signal from temp sensor in outlet pipe from heated pot
 long tank_temp_resistor_1 = 9640;  // resistance value of resistor before thermister for tank temp
 long tank_temp_resistor_2 = 98800;  // resistance value of resistor after thermister for tank temp
 long collector_temp_resistor_1 = 98200;  // resistance value of resistor before thermister for collector temp
@@ -51,7 +51,7 @@ void loop()
 
 	// calculate tank temp:
 
-	tank_temp_ADC_value = sample(tank_temp);
+	tank_temp_ADC_value = sample(tank_temp_pin);
 
 	tank_temp_voltage = tank_temp_ADC_value / 1023 * VCC;
 
@@ -79,7 +79,7 @@ void loop()
 
 	// calculate collector temp:
 
-	collector_temp_ADC_value = sample(collector_temp);
+	collector_temp_ADC_value = sample(collector_temp_pin);
 
 	collector_temp_voltage = collector_temp_ADC_value / 1023 * VCC;
 
@@ -101,7 +101,7 @@ void loop()
 
 	// calculate output temp:
 
-	output_temp_ADC_value = sample(output_temp);
+	output_temp_ADC_value = sample(output_temp_pin);
 
 	output_temp_voltage = output_temp_ADC_value / 1023 * VCC;
 
@@ -182,8 +182,6 @@ float sample(byte pin)
 		}
 		return (sum / num_samples);
 	}
-
-
 
 }
 //end program
