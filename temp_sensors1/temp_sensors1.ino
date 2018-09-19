@@ -51,7 +51,7 @@ void loop()
 
 	// calculate tank temp:
 
-	tank_temp_ADC_value = sample(tank_temp_pin);
+	tank_temp_ADC_value = sample(tank_temp_pin, 50, 10);
 
 	tank_temp_voltage = tank_temp_ADC_value / 1023 * VCC;
 
@@ -79,7 +79,7 @@ void loop()
 
 	// calculate collector temp:
 
-	collector_temp_ADC_value = sample(collector_temp_pin);
+	collector_temp_ADC_value = sample(collector_temp_pin, 50, 10);
 
 	collector_temp_voltage = collector_temp_ADC_value / 1023 * VCC;
 
@@ -101,7 +101,7 @@ void loop()
 
 	// calculate output temp:
 
-	output_temp_ADC_value = sample(output_temp_pin);
+	output_temp_ADC_value = sample(output_temp_pin, 50, 10);
 
 	output_temp_voltage = output_temp_ADC_value / 1023 * VCC;
 
@@ -143,45 +143,32 @@ void loop()
 	//Serial.print (output_temperature);
 	//Serial.println(" c ");
 }
-// This function will read the tank temp sensor pin x# of times and take an average.
+// This function will read the provided sensor pin num_samples of times and take an average.
+// Each sample will have an interval of sample_interval between samples
+//Blocks execution of rest of program until we have all samples, could be improved
+float sample(byte pin, unsigned int num_samples, unsigned int sample_interval)
+{	
+	//Value to hold the sum of each sample
+	unsigned long running_sum = 0;
 
-float sample(byte pin)
-{
-	float sample_value;
-	const long num_samples = 8000;
-	long buffer[num_samples];
-	long index;
-	unsigned long present_millis;
-	unsigned long past_millis;
-	unsigned long sample_interval = 10;
-	float readsample(sample_value);
-	{
-		present_millis = millis();
-		if (present_millis >= sample_interval + past_millis)
+	//Loop that takes samples until we have the desired number
+	for (int i = 0; i < num_samples; i++)
+	{	
+		unsigned long present_millis = millis();
+		unsigned long past_millis = present_millis;
+		//Loop in place until enough time has passed
+		while (present_millis - past_millis < sample_interval) //Present - past handles overflow nicely
 		{
-			sample_value = analogRead(pin);
-			past_millis = millis();
+			present_millis = millis();
 		}
-		return sample_value;
+		//enough time has passed, take the sample and add it to our running sum
+		running_sum = running_sum + analogRead(pin);
 	}
 
-	float addsamples(sample_value);
-	{
-		buffer[index] = sample_value;
-		index++;
-		if (index >= num_samples) index = 0;
-		return sample_value;
-	}
-
-	float sample_average();
-	{
-		float sum = 0;
-		for (int i = 0; i < num_samples; i++)
-		{
-			sum += buffer[i];
-		}
-		return (sum / num_samples);
-	}
+	//Now we have a total of all our samples, divide by how many we sampled to average them.
+	float average = running_sum / num_samples;
+	
+	return average; // return average of samples back to whoever needs it.
 
 }
 //end program
