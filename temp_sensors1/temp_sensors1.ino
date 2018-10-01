@@ -8,11 +8,11 @@ long collector_temp_resistor_1 = 98200;  // resistance value of resistor before 
 long collector_temp_resistor_2 = 199000;  // resistance value of resistor after thermister for collector temp
 long output_temp_resistor_1 = 98700;  // resistance value of resistor before thermister for output temp
 long output_temp_resistor_2 = 200000;  // resistance value of resistor after thermister for output temp
-float tank_temp_ADC_value; // tank temp sensor analog to digital converter value 0-1023
+float tank_temp_ADC_value = 0; // tank temp sensor analog to digital converter value 0-1023
 float tank_temp_resistance; // calculated resistance of tank temp sensor
-float collector_temp_ADC_value; // collector temp sensor analog to digital converter value 0-1023
+float collector_temp_ADC_value = 0; // collector temp sensor analog to digital converter value 0-1023
 float collector_temp_resistance; // calculated resistance of collector temp sensor
-float output_temp_ADC_value; // output temp sensor analog to digital converter value 0-1023
+float output_temp_ADC_value = 0; // output temp sensor analog to digital converter value 0-1023
 float output_temp_resistance; // calculated resistance of output temp sensor
 float tank_temp_voltage; // converted ADC_value to voltage
 float collector_temp_voltage; // converted ADC_value to voltage
@@ -29,6 +29,22 @@ const byte PWM_pin = 4;
 const byte POT_pin = 0;
 float on_time;
 int POT_value;
+
+//Variables for sampling
+float tmp_avg; //temp variable for averages
+
+unsigned long	past_millis_tank_temp = 0;
+int			curr_sample_num_tank_temp = 0;
+double			running_avg_tank_temp = 0;
+
+unsigned long	past_millis_collector_temp = 0;
+int			curr_sample_num_collector_temp = 0;
+double			running_avg_collector_temp = 0;
+
+unsigned long	past_millis_output_temp = 0;
+int			curr_sample_num_output_temp = 0;
+double			running_avg_output_temp = 0;
+
 
 void setup()
 {
@@ -50,8 +66,12 @@ void loop()
 	analogWrite(PWM_pin, on_time);
 
 	// calculate tank temp:
-
-	tank_temp_ADC_value = sample(tank_temp_pin, 50, 10);
+	//Sample returns -1 if not ready, otherwise it returns >= 0 if it is ready
+	tmp_avg = sample(tank_temp_pin, 50, 10, past_millis_tank_temp, curr_sample_num_tank_temp, running_avg_tank_temp);
+	if (tmp_avg >= 0)
+	{
+		tank_temp_ADC_value = tmp_avg; //Update value if sample ready, otherwise it remains what it was before
+	}
 
 	tank_temp_voltage = tank_temp_ADC_value / 1023 * VCC;
 
@@ -77,9 +97,13 @@ void loop()
 
 
 
-	// calculate collector temp:
-
-	collector_temp_ADC_value = sample(collector_temp_pin, 50, 10);
+	// calculate collector temp: 
+	//Sample returns -1 if not ready, otherwise it returns >= 0 if it is ready
+	tmp_avg = sample(collector_temp_pin, 50, 10, past_millis_collector_temp, curr_sample_num_collector_temp, running_avg_collector_temp);
+	if (tmp_avg >= 0)
+	{
+		collector_temp_ADC_value = tmp_avg; //Update value if sample ready, otherwise it remains what it was before
+	}
 
 	collector_temp_voltage = collector_temp_ADC_value / 1023 * VCC;
 
@@ -100,8 +124,12 @@ void loop()
 	collector_temperature = collector_temperature - 273.15;
 
 	// calculate output temp:
-
-	output_temp_ADC_value = sample(output_temp_pin, 50, 10);
+	//Sample returns -1 if not ready, otherwise it returns >= 0 if it is ready
+	tmp_avg = sample(output_temp_pin, 50, 10, past_millis_output_temp, curr_sample_num_output_temp, running_avg_output_temp);
+	if (tmp_avg >= 0)
+	{
+		output_temp_ADC_value = tmp_avg; //Update value if sample ready, otherwise it remains what it was before
+	}
 
 	output_temp_voltage = output_temp_ADC_value / 1023 * VCC;
 
@@ -145,30 +173,38 @@ void loop()
 }
 // This function will read the provided sensor pin num_samples of times and take an average.
 // Each sample will have an interval of sample_interval milliseconds between samples
-//Blocks execution of rest of program until we have all samples, could be improved
-float sample(byte pin, unsigned int num_samples, unsigned int sample_interval)
+// Doesn't block execution of rest of program. Must be called in loop to ensure all samples taken
+// Sample returns -1 if not ready, otherwise it returns >= 0 if it is ready, and then resets for the use
+// of more samples.
+float sample(byte pin, unsigned int num_samples, unsigned int sample_interval, unsigned long& past_millis, int& curr_sample_num, float& running_avg)
 {	
-	//Value to hold the sum of each sample
-	unsigned long running_sum = 0;
+	unsigned long present_millis = millis();
 
-	//Loop that takes samples until we have the desired number
-	for (int i = 0; i < num_samples; i++)
-	{	
-		unsigned long present_millis = millis();
-		unsigned long past_millis = present_millis;
-		//Loop in place until enough time has passed
-		while (present_millis - past_millis < sample_interval) //Present - past handles overflow nicely
-		{
-			present_millis = millis();
-		}
-		//enough time has passed, take the sample and add it to our running sum
-		running_sum = running_sum + analogRead(pin);
+	//Check that enough time has passed. If elapsed time is less than sample interval, return <0
+	//to let caller know average not ready yet
+	if(present_millis - past_millis < sample_interval) //Present - past handles overflow nicely
+	{
+		return -1; 
 	}
 
-	//Now we have a total of all our samples, divide by how many we sampled to average them.
-	float average = running_sum / num_samples;
-	
-	return average; // return average of samples back to whoever needs it.
+	//enough time has passed, take the sample and add it to our running avg. Also update past millis for next time
+	curr_sample_num++;
+	past_millis = present_millis;
+	float val = analogRead(pin); //Take reading and make it a double so we perform floating point division
+	running_avg = val / num_samples + running_avg; //Update running average
 
+	//check if we have the desired number of samples
+	if(curr_sample_num < num_samples)
+	{
+		return -1; //Not enough samples
+	}
+	else
+	{
+		//Enough samples taken. Return average. 
+		float average = running_avg;
+		running_avg = 0; //Reset running avg to 0 for next time
+		curr_sample_num = 0; //Reset curr sample num for next time
+		return average;
+	}
 }
 //end program
